@@ -1,4 +1,6 @@
-FROM registry.access.redhat.com/ubi9/ubi-init:latest
+FROM registry.access.redhat.com/ubi8/go-toolset:1.20
+
+USER root
 
 RUN dnf install -y \
         sudo git-core \

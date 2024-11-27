@@ -1,4 +1,4 @@
-FROM ghcr.io/gbraad-devenv/ubi8-gotoolset/base:1.20
+FROM ghcr.io/gbraad-devenv/ubi8-gotoolset/base:1.22
 
 USER root
 
@@ -12,7 +12,7 @@ RUN dnf install -y \
     && rm -rf /var/cache/yum
 
 USER gbraad
-ENV HOME /home/gbraad
+ENV HOME=/home/gbraad
 
 RUN git clone https://github.com/gbraad/dotfiles ~/.dotfiles \
     && ~/.dotfiles/install.sh
